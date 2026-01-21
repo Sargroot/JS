@@ -28,3 +28,9 @@ console.log(i);
 
 const h = 'a';
 console.log(h)
+let text3="Hello Website"
+console.log(text3.replace("Website","Hello"))
+
+let text2 = "Welcomw To JavaScript";
+console.log(text2.toUpperCase());
+console.log(text2.toLowerCase());
