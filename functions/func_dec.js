@@ -18,6 +18,9 @@ console.log(z);
 const y =new Function("a","b"," return a+b ");
 let an = y(12,12);
 console.log(an);
+const y =new Function("a","b"," return a+b ");
+let an = y(12,12);
+console.log(an);
 
 const myfunc = Function("a","b", "return a*b");
 let an1 = myfunc(4,3);
