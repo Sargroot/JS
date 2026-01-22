@@ -16,3 +16,22 @@ try{
     console.log(emsg);
 }
 
+
+
+
+let eligibility = (age) =>{
+    try{
+        if(age<=0){
+            throw new Error("Can't be negative");
+        }
+        console.log("Login success");
+    }
+    catch(error){
+        console.log(error);
+    }
+    finally{
+        console.log("Runs every time");
+    }
+}
+
+eligibility(-5);
