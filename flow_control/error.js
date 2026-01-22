@@ -2,7 +2,7 @@ try{
     x=y;
 }catch(err){
     let text = err.name +" and "+err.message;
-    console.log(text);
+    console.log(err);
 }
 
 

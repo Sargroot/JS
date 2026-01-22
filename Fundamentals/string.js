@@ -15,10 +15,10 @@ console.log(t2.slice(2,6));
 console.log(t2.charAt(9));
 
 let text = "apple, carrot, mango";
-let part = text.slice(7,13);
+let part = text.slice(13);
 let part1 = text.slice(0,5);
 console.log(part1);
-console.log(part);
+console.log(part+" this ");
 
 console.log(t3);
 let n = 10;

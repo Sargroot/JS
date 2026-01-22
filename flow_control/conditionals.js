@@ -20,7 +20,7 @@ min=1;
 max=10;
 num1 = Math.floor(Math.random() * (max - min + 1) + min);
 function hello2(num1){
-switch (num1){
+switch (true){
     case 1:
         console.log("even");
         break;
