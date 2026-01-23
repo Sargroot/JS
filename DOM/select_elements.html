@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Querry/Select Elements</title>
+
+</head>
+<body>
+    <p id="first">Hello this from first tag</p>
+    <p id="second">hello this is fron second tag</p>
+    <p class="play">Saravanane</p>
+    <p id="op"></p>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p class="welcome"></p>
+    <p class="hello">1</p>
+    <p class="hello">2</p>
+    <p class="hello">3</p>
+    <b class="one">one</b><br>
+    <b class="one">two</b>
+
+    <script>
+        const a = document.getElementById("first");
+        const b = document.getElementsByTagName("p");
+        const c = document.getElementsByClassName("play");
+        const d = document.querySelector(".welcome");
+        const e = document.querySelectorAll(".hello");
+        const f = document.querySelectorAll("b.one");
+        document.getElementById("op").innerHTML = "hello : "+a.innerHTML;
+        document.getElementById("op1").innerHTML = "This is a div tag :"+b[1].innerHTML;
+        document.getElementById("op2").innerHTML = "My name is :"+c[0].innerHTML;
+        d.innerHTML = "Edit via backend using querry selector";
+        e[1].innerHTML = "Edited using querry selector all";
+        f[0].innerHTML = "Edited using querry selector all ";
+        f[1].style.backgroundColor="red";
+
+    </script>
+</body> 
+</html>
