@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + JS</title>
+
+<style>
+    #image{
+        border:3px solid red;
+        border-radius: 20px;
+    }
+    #col{
+        width:200px;
+        height: 40px;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>HTML and JavaScript</h2>
+    <p id="change">hello i have not changed</p>
+    <p id="change1">Hello i have not chnaged1</p>
+    <img src="imfish.png" id="image" height="200px" width="200px"><br>
+    <button id="col" onclick="differ()" style="background-color: red; color: white;"><b>CLICK ME</b></button>
+    
+
+<script>
+     document.getElementById("change").innerHTML = "Now i have been changed";
+    const a = document.getElementById("change1");
+    a.innerHTML= "see u have been changed";
+    
+    const d = document.getElementById("col");
+
+    function differ(){
+    document.getElementById("image").style.borderColor="green";
+    d.style.backgroundColor="green";
+    document.getElementById("image").src="imtree.png";
+    
+
+    }
+</script>
+
+
+</body>
+</html>
