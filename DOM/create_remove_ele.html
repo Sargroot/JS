@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create & Remove</title>
+</head>
+<body>
+    <h1>Welcomme</h1>
+    <p>Hello this is a p tag</p>
+    <h2 id="tree">This is a h2 tag</h2>
+    <ul id="do">
+        <li>Hello1</li>
+        <li>Hello2</li>
+    </ul>
+    <button onclick="create()" >CREATE</button>
+    <button onclick="remove()" >REMOVE</button>
+<script>
+    const bld = document.createElement("b");
+    bld.innerHTML = "Hello this is a bold text";
+    
+    const tr = document.createElement("center");
+    tr.innerHTML = "new bold";
+
+   
+    console.log(type(null));
+    function create(){
+        const cr = document.createElement("li");
+        cr.innerHTML = "hello..n";
+        document.getElementById("do").appendChild(cr);
+    }
+
+    function remove(){
+        const d = document.getElementById("do");
+        d.removeChild(d.lastElementChild)
+
+    }
+
+
+    document.body.appendChild(bld);
+    document.getElementById("tree").appendChild(tr);    
+
+
+</script>
+    
+</body>
+</html>
