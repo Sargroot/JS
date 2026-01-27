@@ -15,11 +15,15 @@ var a = 11;
     var a=22;
 }
 console.log(a);
-
+console.log("======")
 
 console.log(name);
+function hello(){
 var name = "one";
+
+}
 console.log(name);
+console.log("======")
 
 
 // console.log(nam);

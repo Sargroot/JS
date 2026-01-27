@@ -2,6 +2,9 @@
 let camelCase = 900;
 console.log(camelCase);
 
+let superNumber =100;
+
+
 /*Pascal case*/
 let PascalCase = 999;
 console.log(PascalCase);

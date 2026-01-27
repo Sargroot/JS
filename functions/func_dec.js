@@ -16,8 +16,8 @@ let z = x(4,4);
 console.log(z);
 
 const y =new Function("a","b"," return a+b ");
-let an = y(12,12);
-console.log(an);
+let an = y("12","12");
+console.log(an+" op");
 
 
 const myfunc = Function("a","b", "return a*b");

@@ -12,8 +12,8 @@ try{
 }catch(err){
     let ename = err.name;
     let emsg = err.message;
-    console.log(ename);
-    console.log(emsg);
+    // console.log(ename);
+    // console.log(emsg);
 }
 
 
@@ -25,6 +25,7 @@ let eligibility = (age) =>{
             throw new Error("Can't be negative");
         }
         console.log("Login success");
+        
     }
     catch(error){
         console.log(error);
