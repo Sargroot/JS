@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <div id="box" style="border: 5px solid green; height: 150px; width: 300px;"><center>Mouse hover</center></div>
+    <div id="box1" style="border: 5px solid green; height: 150px; width: 300px;"><center>Mouse Click</center></div>
+<input id="k" type="text" placeholder="Press a key here!">
+
+<p id="demo"></p>
+
+
+<form onsubmit="myfunc()">
+    Enter name:<input type="text" ><br>
+    <input type="submit" value="submit"><br>
+</form>
+<script>
+    const a = document.getElementById("box");
+    const a1 = document.getElementById("box1");
+    const a2 = document.getElementById("box2");
+
+    a.addEventListener("mouseover",function(){
+        a.innerHTML="changed";
+        a.style.color="red";
+    })
+    a.addEventListener("mouseout",function(){
+        a.innerHTML="now changed differently";
+
+    })
+    a1.addEventListener("click",function(){
+        a1.innerHTML="changed";
+        a1.style.color="red";
+    })
+    a1.addEventListener("dblclick",function(){
+        a1.innerHTML="now changed differently";
+
+    })
+
+const k = document.getElementById("k");
+
+
+k.addEventListener("keydown", function (event) {
+  document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+});
+
+document.getElementById("btn").addEventListener("click",function(){
+    alert("button Pressed");
+});
+
+
+function myfunc(){
+    alert("Form submitted");
+}
+
+    
+</script>
+</body>
+</html>

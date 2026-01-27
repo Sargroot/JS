@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+
+<style>
+div{
+    display: block;
+    padding: 25px;
+    margin: 15px;
+}
+#one{
+    border: 3px solid red;
+}
+#two{
+    border: 3px solid green;
+}
+#three{
+    border: 3px solid blue;
+}
+</style>
+</head>
+<body>
+<div id="one">
+    First Box<br>
+    <div id="two">
+        Second Box<br>
+        <div id="three">
+            Third Box
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+const a = document.getElementById("one");
+const b = document.getElementById("two");
+const c = document.getElementById("three");
+
+a.addEventListener("click",function (e) {
+    console.log("First Box clicked");
+})
+b.addEventListener("click",function (e) {
+    console.log("Second Box clicked");
+})
+c.addEventListener("click",function (e) {
+    e.stopPropagation();
+    console.log("Third Box clicked");
+})
+
+
+
+</script>
+    
+</body>
+</html>
