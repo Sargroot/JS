@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json example</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+<script>
+
+let text = '{"employees":[' +'{"name":"saro","age":21},'+'{"name":"saro1","age":20}]}';
+
+let a = {name:"Sarvanane"};//string
+
+let b = {age:20};//number
+
+let c = {location:{  //object
+    city:"pondicherry",
+    country:"india"
+}}
+
+let d = {name:["saro0","saro1","saro2"]};//array
+
+const obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML = obj.employees[1].name+" "+obj.employees[0].age;
+document.getElementById("demo1").innerHTML = JSON.stringify(c);
+
+
+</script>
+</body>
+</html>
