@@ -38,3 +38,6 @@ let val = fruits.get("apple");
 let val1 = fruits.get("banana");
 console.log(val);
 console.log(val1);
+let mp = fruits.values();
+console.log(mp.next().value);
+console.log(fruits.keys());
