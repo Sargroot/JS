@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <h1>Click the button</h1>
+    <button onclick="myfunc()" >COUNT</button>
+    <p id="result1"></p>
+
+<script>
+function myfunc(){
+    const b = document.getElementById("result1");
+    if(typeof(localStorage)!=="undefined"){
+        if(localStorage.count){
+            localStorage.count = Number(localStorage.count) + 1;
+        }
+        else{
+            localStorage.count = 1;
+        }
+        b.innerHTML = localStorage.count;
+    }
+    else{
+        b.innerHTML="Not Supported";
+    }
+}
+
+    const a = document.getElementById("result");
+
+if(typeof(Storage)!== "undefined"){
+    localStorage.setItem("fname","saro");
+    localStorage.setItem("bgclr","red");
+
+    a.innerHTML = localStorage.getItem("fname");
+    a.style.backgroundColor = localStorage.getItem("bgclr");
+}
+else{
+    a.innerHTML = "not found";
+}
+</script>
+</body>
+</html>

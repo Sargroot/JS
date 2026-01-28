@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+
+<script>
+    function myfunc(){
+        const a = document.getElementById("op");
+
+        if(typeof(sessionStorage)!=="undefined"){
+            if(sessionStorage.box){
+                sessionStorage.box = Number(sessionStorage.box)+1;
+            }
+            else{
+                sessionStorage.box = 1;
+            }
+            a.innerHTML=sessionStorage.box;
+        }else{
+            a.innerHTML="Browser Not supported";
+        }
+    }
+</script>
+</head>
+
+<body>
+    <h1>Session Storage</h1>
+    <p>Press the button to count</p>
+    <button onclick="myfunc()">COUNT</button>
+    <p id="op"></p>
+</body>
+</html>
