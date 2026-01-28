@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation using JS</title>
+
+</head>
+<body>
+    <form name="myform" onsubmit="return valform()" method="get">
+        First Name:<br>
+        <input type="text" name="fname"><br>
+        Last Name:<br>
+        <input type="text" name="lname"><br>
+        Mobile No:<br>
+        <input type="text" name="mobno"><br>
+        Gmail:<br>
+        <input type="email" name="mail"><br><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+function valform(){
+    let a = document.forms["myform"];
+    let b = a["fname"].value;
+    let c = a["lname"].value;
+    let d = a["mobno"].value;
+    let e = a["mail"].value;
+
+    let text="";
+    let gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    if(b=="" || b.length<3 || b.length>10 ){
+        text= "invalid First name";
+        document.getElementById("demo1").innerHTML=text;
+    }
+    if(c=="" || c.length<3 || c.length>10 ){
+        text= "invalid Second name";
+        document.getElementById("demo1").innerHTML+="<br>"+text;    
+    }
+    if(d=="" || d.length!=10){
+        text= "invalid Mobile number";
+        document.getElementById("demo1").innerHTML+="<br>"+text;   
+    }
+    if(!gmailRegex.test(e)){
+        text= "invalid Email address";
+        document.getElementById("demo1").innerHTML+="<br>"+text;   
+    }
+
+    if(text==""){
+        document.getElementById("demo1").innerHTML="Login Success";
+    }
+    return false;
+    
+}
+</script>
+</body>
+</html>

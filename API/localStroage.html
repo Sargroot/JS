@@ -7,7 +7,7 @@
 </head>
 <body>
     <p id="result"></p>
-
+    <p id="result2"></p>
     <h1>Click the button</h1>
     <button onclick="myfunc()" >COUNT</button>
     <p id="result1"></p>
@@ -30,13 +30,15 @@ function myfunc(){
 }
 
     const a = document.getElementById("result");
+    const c = document.getElementById("result2");
 
 if(typeof(Storage)!== "undefined"){
-    localStorage.setItem("fname","saro");
-    localStorage.setItem("bgclr","red");
+    // localStorage.setItem("fname","saro");
+    // localStorage.setItem("bgclr","red");
 
     a.innerHTML = localStorage.getItem("fname");
     a.style.backgroundColor = localStorage.getItem("bgclr");
+    c.innerHTML = localStorage.getItem("count");
 }
 else{
     a.innerHTML = "not found";
