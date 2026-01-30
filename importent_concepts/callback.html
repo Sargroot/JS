@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <p id="demo">welcome</p>
+    <p id="demo1">welcome</p>
+<script>
+
+function hello(one){
+    document.getElementById("demo").innerHTML = one +" from hello function";
+}
+
+function hello1(one){
+    document.getElementById("demo1").innerHTML = one +" from hello1 function";
+}
+
+function me(a,b,myCallback){
+    let add = a+b;
+    myCallback(a);
+}
+
+me(2,5,hello1);
+me(10,20,hello);
+
+</script>
+</body>
+</html>
+

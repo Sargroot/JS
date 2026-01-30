@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+
+
+</head>
+<body>
+    <h1 id="change">This is the text changes the color</h1>
+    <button id="btn1">RED</button><br>
+    <button id="btn2">GREEN</button><br>
+    <button id="btn3">BLUE</button><br>
+
+<script>
+let cng = document.getElementById("change");
+
+function one(size){
+    return ()=>{
+        cng.style.color =  `${size}`;
+    }
+}
+
+const a1 = one("red");
+const a2 = one("green");
+const a3 = one("blue");
+document.getElementById("btn1").onclick = a1;
+document.getElementById("btn2").onclick = a2;
+document.getElementById("btn3").onclick = a3;
+
+</script>
+</body>
+</html>
